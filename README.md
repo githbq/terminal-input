@@ -19,14 +19,16 @@ npm install terminal-input
 ## 使用   
 
 ``` ts
-import { confirm } from 'terminal-input'
+import { confirm,input } from 'terminal-input'
 
 async function(){
     // 参数1 问题
     // 参数2 默认答案
     // 参数3 问题的颜色
-    const answer = await confirm('how are you?','no anwser',color?='yellow')
-    // answer: 'I am fine'
+    const answer = await confirm('how are you?','y',color?='yellow')
+    // answer: true
+     const answer2 = await input('how are you?','ok',color?='yellow')
+    // answer: 'ok'
 }
 
 ```
